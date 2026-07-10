@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import { WalletProvider } from "./context/WalletContext.jsx";
 import "./styles/globals.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
