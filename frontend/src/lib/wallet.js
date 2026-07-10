@@ -5,7 +5,7 @@ export function hasInjectedWallet() {
 }
 
 /** Prompts the wallet's connect dialog and returns the selected address. */
-export async function requestAccount() 
+export async function requestAccount() {
   if (!hasInjectedWallet()) {
     throw new Error("No wallet found. Install MetaMask (or another injected wallet) to continue.");
   }
