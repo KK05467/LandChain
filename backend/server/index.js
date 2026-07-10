@@ -15,7 +15,7 @@ const app = express();
 app.use(helmet());
 app.use(cors({ origin: env.CLIENT_ORIGIN, credentials: true }));
 app.use(express.json({ limit: "2mb" }));
-app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
+app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"))
 
 // Generous global limit; the /auth routes get a tighter one below.
 app.use(
