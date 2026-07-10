@@ -1,0 +1,40 @@
+{
+  "name": "landchain-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "promote-verifier": "node scripts/promote-verifier.js",
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "dev": "concurrently \"npm:node\" \"npm:server:dev\""
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.2.0",
+    "google-auth-library": "^9.14.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "kubo-rpc-client": "^4.1.1",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^9.0.1",
+    "hardhat": "^2.22.10",
+    "nodemon": "^3.1.4"
+  }
+}

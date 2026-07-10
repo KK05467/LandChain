@@ -1,0 +1,118 @@
+.property-card-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.property-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+}
+
+.property-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.property-card__label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.property-card__badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--status-good);
+  background: var(--status-good-bg);
+  border: 1px solid var(--status-good-border);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+}
+
+.property-card__id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.property-card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  margin-bottom: 28px;
+}
+
+.property-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.property-card__field-label {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.property-card__field-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.property-card__field-value--good {
+  color: var(--green-deep);
+}
+
+:root[data-theme="dark"] .property-card__field-value--good {
+  color: #5cd68c;
+}
+
+.property-card__hash {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.property-card__hash code {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .property-card {
+    padding: 28px;
+  }
+  .property-card__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}

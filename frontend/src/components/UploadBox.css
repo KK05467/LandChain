@@ -1,0 +1,241 @@
+.upload-box-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.upload-box--locked {
+  cursor: default;
+  border-style: solid;
+}
+
+.upload-file-card__status--error {
+  color: var(--status-bad-ink);
+}
+
+.upload-register {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.upload-register h4 {
+  font-size: 19px;
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+.upload-register__hint {
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.upload-register__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+  margin-bottom: 6px;
+}
+
+.upload-register__location {
+  grid-column: 1 / -1;
+}
+
+.upload-register .field {
+  margin-bottom: 0;
+}
+
+.upload-register .field input {
+  padding: 13px 16px;
+}
+
+.upload-register .auth-card__error,
+.upload-register .auth-card__success {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.upload-register .upload-box__submit {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.upload-box {
+  padding: 64px 40px;
+  border-radius: var(--radius-lg);
+  border: 1.5px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: border-color var(--dur-med) var(--ease-premium), background var(--dur-med) var(--ease-premium);
+}
+
+.upload-box--active,
+.upload-box:hover {
+  border-color: var(--accent);
+  background: var(--surface-strong);
+}
+
+.upload-box__icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--beige);
+  border: var(--border-w) solid var(--border);
+  color: #14140f;
+  margin-bottom: 8px;
+}
+
+:root[data-theme="dark"] .upload-box__icon {
+  background: var(--royal-blue);
+  color: #ffffff;
+}
+
+.upload-box h3 {
+  font-size: 22px;
+  color: var(--text);
+}
+
+.upload-box p {
+  max-width: 380px;
+  font-size: 14px;
+}
+
+.upload-box__browse {
+  margin-top: 14px;
+  pointer-events: none;
+}
+
+.upload-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.upload-file-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: var(--radius-md);
+}
+
+.upload-file-card__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--surface-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.upload-file-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-file-card__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.upload-file-card__name {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload-file-card__size {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+
+.upload-file-card__progress-track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.upload-file-card__progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--royal-blue);
+}
+
+.upload-file-card__status {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.upload-file-card__hash {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.upload-file-card__hash span {
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.upload-file-card__hash code {
+  color: var(--status-good-ink);
+  font-family: "SF Mono", "Fira Code", monospace;
+}
+
+.upload-file-card__remove {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  background: var(--surface);
+}
+
+.upload-file-card__remove:hover {
+  color: var(--text);
+  background: var(--surface-strong);
+}
+
+.upload-box__submit {
+  align-self: flex-end;
+  padding: 15px 30px;
+}
+
+.upload-box__submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .upload-box {
+    padding: 44px 24px;
+  }
+  .upload-box__submit {
+    align-self: stretch;
+  }
+}

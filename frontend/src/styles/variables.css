@@ -1,0 +1,113 @@
+/* ==========================================================
+   LANDCHAIN design tokens — neo-brutalist, thick-border,
+   hard-shadow, no-gradient system. Dot-mesh background only.
+========================================================== */
+
+:root {
+  /* ---- Fonts ---- */
+  --font-display: "Fredoka", "Poppins", sans-serif;
+  --font-body: "Space Grotesk", -apple-system, sans-serif;
+  --font-mono: "Space Mono", "Fira Code", monospace;
+
+  /* ---- Palette (same hues both themes; only bg/border/text swap) ---- */
+  --royal-blue: #3355d1;
+  --royal-blue-deep: #1f3ba8;
+  --beige: #f2e6cf;
+  --beige-deep: #e3d3ac;
+  --red: #e04848;
+  --red-deep: #c23434;
+  --green: #2f9e5b;
+  --green-deep: #217d46;
+
+  /* ---- Radii ---- */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-full: 999px;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.18s;
+  --dur-med: 0.4s;
+  --dur-slow: 0.8s;
+
+  --container-w: 1280px;
+  --nav-height: 92px;
+
+  /* ---- Border weight (the defining trait of this look) ---- */
+  --border-w: 2.5px;
+
+  /* ---- Status chips ---- */
+  --status-good: #ffffff;
+  --status-good-bg: var(--green);
+  --status-good-border: var(--green-deep);
+  --status-warn: #1a1a1a;
+  --status-warn-bg: var(--beige-deep);
+  --status-warn-border: #b89b5e;
+  --status-bad: #ffffff;
+  --status-bad-bg: var(--red);
+  --status-bad-border: var(--red-deep);
+}
+
+/* =========================================
+   LIGHT THEME — beige/white canvas, black ink+borders
+========================================= */
+:root[data-theme="light"] {
+  --bg: #faf6ec;
+  --bg-2: #f2ead9;
+  --bg-3: var(--beige);
+
+  --text: #14140f;
+  --text-dim: rgba(20, 20, 15, 0.72);
+  --text-faint: rgba(20, 20, 15, 0.48);
+
+  --border: #14140f;
+  --border-strong: #14140f;
+
+  --surface: #ffffff;
+  --surface-strong: var(--beige);
+
+  --accent: var(--royal-blue);
+  --accent-ink: #ffffff;
+
+  --shadow-hard: 4px 4px 0 var(--border);
+  --shadow-hard-sm: 3px 3px 0 var(--border);
+  --shadow-hard-lift: 7px 7px 0 var(--border);
+
+  --grid-line: rgba(20, 20, 15, 0.08);
+  --grid-dot: rgba(20, 20, 15, 0.14);
+
+  --status-good-ink: var(--green-deep);
+  --status-bad-ink: var(--red-deep);
+}
+
+/* =========================================
+   DARK THEME — near-black navy canvas, white ink+borders
+========================================= */
+:root[data-theme="dark"] {
+  --bg: #0e1117;
+  --bg-2: #14181f;
+  --bg-3: #0a0d12;
+
+  --text: #f5f2e9;
+  --text-dim: rgba(245, 242, 233, 0.75);
+  --text-faint: rgba(245, 242, 233, 0.5);
+
+  --border: #f5f2e9;
+  --border-strong: #f5f2e9;
+
+  --surface: #171b23;
+  --surface-strong: #1d222c;
+
+  --accent: #6f8bf0;
+  --accent-ink: #0e1117;
+
+  --shadow-hard: 4px 4px 0 var(--border);
+  --shadow-hard-sm: 3px 3px 0 var(--border);
+  --shadow-hard-lift: 7px 7px 0 var(--border);
+
+  --grid-line: rgba(245, 242, 233, 0.08);
+  --grid-dot: rgba(245, 242, 233, 0.16);
+
+  --status-good-ink: #5cd68c;
+  --status-bad-ink: #f08080;
+}

@@ -1,0 +1,8 @@
+node_modules/
+.env
+artifacts/
+cache/
+server/data/db.json
+server/config/contract.json
+coverage/
+*.log
