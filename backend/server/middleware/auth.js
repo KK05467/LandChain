@@ -10,7 +10,7 @@ function protect(req, res, next) {
   if (scheme !== "Bearer" || !token) {
     return res.status(401).json({ message: "Not authorized. Missing bearer token." });
   
-
+  }
   try {
     const payload = jwt.verify(token, env.JWT_SECRET);
     const user = User.findById(payload.sub);
