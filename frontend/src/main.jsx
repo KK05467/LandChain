@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <AuthProvider>
           <WalletProvider>
-            
+            <App />
           </WalletProvider>
         </AuthProvider>
       </BrowserRouter>
