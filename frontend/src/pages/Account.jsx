@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { Navigate } from "react-router-dom";
 import { HiOutlineUserCircle, HiOutlinePencil, HiOutlineCheck } from "react-icons/hi2";
 import { useAuth } from "../context/AuthContext.jsx";
-import { useWallet } from "../context/WalletContext.jsx"
+import { useWallet } from "../context/WalletContext.jsx";
 import { api } from "../lib/api.js";
 import { formatAddress } from "../lib/wallet.js";
 import "./Account.css";
